@@ -48,3 +48,34 @@ src/AppBundle/MesClasses/
 src/AppBundle/MesClasses/CreateSlug.php
 
 Vous trouverez le contenu de ce fichier dans ce dépot github
+
+- Nous le rajoutons ensuite dans les services par défaut de notre installation symfony:
+
+app/config/services.yml
+
+Vous trouverez également le contenu de ce fichier dans ce dépot github
+
+3) Création d'un bundle personnel
+
+Nous allons créer un bundle personnel permettant de tester notre classe CreateSlug
+
+- Créons notre bundle dans notre console:
+
+php app/console generate:bundle
+
+- Nommons le de tel manière à avoir prenom/Test/SlugBundle (on doit toujours terminer par le mot Bundle :
+
+Michael/Test/SlugBundle
+
+- Les options choisies sont (dans ce cas):
+
+Bundle name MichaelTestSlugBundle
+
+Nous le laissons dans src
+
+Nous choisissons le yml pour la configuration
+
+Nous répondons "yes" aux 3 questions suivantes
+
+Le dossier src/Michael/Test/SlugBundle est maintenant créé contient les fichiers de base. Dans app/ les fichiers routing.yml et AppKernel.php ont été mis
+à jour.
