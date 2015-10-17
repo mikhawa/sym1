@@ -1,6 +1,6 @@
 michael_test_slug:
     resource: "@MichaelTestSlugBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /test/slug
 
 app:
     resource: "@AppBundle/Controller/"
