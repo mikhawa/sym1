@@ -11,10 +11,14 @@ namespace AppBundle\MesClasses;
 class CreateSlug {
     public function slugify($chaine)
     {
+        // comme nous passons dans notre exemple par l'URL, transformons en utf8 notre contenu
+        $retour = utf8_decode($chaine);
         // remplace les caractères accentués par leur version non accentuée
-        $retour = strtr( $chaine,
-                'ŠŽšžŸÀÁÂÃÄÅÇÈÉÊËÌÍÎÏÑÒÓÔÕÖØÙÚÛÜÝàáâãäåçèéêëìíîïñòóôõöøùúûüýÿ',
-                'SZszYAAAAAACEEEEIIIINOOOOOOUUUUYaaaaaaceeeeiiiinoooooouuuuyy' );
+        $a = 'ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞ 
+ßàáâãäåæçèéêëìíîïðñòóôõöøùúûýýþÿŔŕ'; 
+        $b = 'aaaaaaaceeeeiiiidnoooooouuuuy 
+bsaaaaaaaceeeeiiiidnoooooouuuyybyRr';
+        $retour = strtr( $retour,  utf8_decode($a),$b );
 
         // remplace les caractères non standards
         $retour = preg_replace(

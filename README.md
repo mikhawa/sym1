@@ -79,3 +79,16 @@ Nous répondons "yes" aux 3 questions suivantes
 
 Le dossier src/Michael/Test/SlugBundle est maintenant créé contient les fichiers de base. Dans app/ les fichiers routing.yml et AppKernel.php ont été mis
 à jour.
+
+Vous pouvez voir les changements ici : https://github.com/mikhawa/sym1/commit/b1df88c795c2fb62328ca6b752ae9d8fd2ae9d62
+
+4) Mise à jour du Bundle pour tester notre classe SlugBundle
+
+- Regardons ce commit pour voir les fichiers modifiés: https://github.com/mikhawa/sym1/commit/a9040f6366c12b1406e6e23c665e3c8b75110b0d
+
+Lors de l'appel à sym1/web/app_dev.php/test/slug/J'aime vraiment l'école !
+
+Nous recevons comme réponse: 
+
+URL slug:
+J-aime-vraiment-l-ecole
