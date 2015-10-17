@@ -30,3 +30,21 @@ cd sym1
 
 php app/console
 
+- Si la liste apparait, nous sommes dans le bon, sinon il faut vérifier les étapes précédentes.
+
+2) Utilisation du bundle par défaut
+
+- En suivant le livre des bonnes pratiques, on se rend compte que ce Bundle nommé AppBundle peut servir à contenir nos classes (ou fonctions transformées
+en classes) utiles à tous nos bundle
+
+voir : http://symfony.com/doc/current/best_practices/business-logic.html
+
+- Nous pouvons créer un dossier et y ajouter toutes nos classes utiles pour les bundle:
+
+src/AppBundle/MesClasses/
+
+- Nous décidons de créer une classe pour transformer un titre francophone en slug:
+
+src/AppBundle/MesClasses/CreateSlug.php
+
+Vous trouverez le contenu de ce fichier dans ce dépot github
