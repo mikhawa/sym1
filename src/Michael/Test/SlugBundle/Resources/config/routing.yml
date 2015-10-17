@@ -1,0 +1,3 @@
+michael_test_slug_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: MichaelTestSlugBundle:Default:index }

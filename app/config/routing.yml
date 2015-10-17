@@ -1,3 +1,7 @@
+michael_test_slug:
+    resource: "@MichaelTestSlugBundle/Resources/config/routing.yml"
+    prefix:   /
+
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
