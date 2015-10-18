@@ -1,0 +1,6 @@
+michael_test_mon_orm_homepage:
+    path:     /
+    defaults: { _controller: MichaelTestMonOrmBundle:Default:index }
+michael_test_mon_orm_new:
+    path:     /new
+    defaults: { _controller: MichaelTestMonOrmBundle:Default:newDroit }

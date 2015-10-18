@@ -1,0 +1,48 @@
+Michael\Test\MonOrmBundle\Entity\Article:
+    type: entity
+    table: article
+    uniqueConstraints:
+        leslug_UNIQUE:
+            columns:
+                - leslug
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: true
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        letitre:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+        leslug:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+        letexte:
+            type: text
+            nullable: true
+            length: 65535
+            options:
+                fixed: false
+        ladate:
+            type: datetime
+            nullable: true
+    manyToMany:
+        utilisateur:
+            targetEntity: Utilisateur
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: article
+            inversedBy: null
+            joinTable: null
+            orderBy: null
+    lifecycleCallbacks: {  }

@@ -1,0 +1,69 @@
+Michael\Test\MonOrmBundle\Entity\Utilisateur:
+    type: entity
+    table: utilisateur
+    indexes:
+        fk_utilisateur_droit_idx:
+            columns:
+                - droit_id
+    uniqueConstraints:
+        lelogin_UNIQUE:
+            columns:
+                - lelogin
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: true
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        lelogin:
+            type: string
+            nullable: true
+            length: 60
+            options:
+                fixed: false
+        lepass:
+            type: string
+            nullable: true
+            length: 60
+            options:
+                fixed: false
+        lemail:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+    manyToOne:
+        droit:
+            targetEntity: Droit
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                droit_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    manyToMany:
+        article:
+            targetEntity: Article
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: utilisateur
+            joinTable:
+                name: utilisateur_has_article
+                joinColumns:
+                    -
+                        name: utilisateur_id
+                        referencedColumnName: id
+                inverseJoinColumns:
+                    -
+                        name: article_id
+                        referencedColumnName: id
+            orderBy: null
+    lifecycleCallbacks: {  }

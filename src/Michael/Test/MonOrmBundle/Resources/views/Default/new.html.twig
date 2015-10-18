@@ -1,0 +1,12 @@
+{# nous étendons cette page de notre modèle ce trouvant dans /app #}
+{% extends "base.html.twig"%}
+{# modifictaion de notre bloc body #}
+{% block body %}
+
+<h3>Insertion d'un droit</h3>
+
+  {{ form(form) }}
+
+<a href="{{ url('michael_test_mon_orm_homepage') }}">Accueil</a><br/>
+
+{% endblock %}

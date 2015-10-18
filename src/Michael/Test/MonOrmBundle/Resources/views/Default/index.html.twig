@@ -1,0 +1,9 @@
+{# nous étendons cette page de notre modèle ce trouvant dans /app #}
+{% extends "base.html.twig"%}
+{# modifictaion de notre bloc body #}
+{% block body %}
+    {% for item in name %}
+{{item.id}} || {{item.lintitule}} || {{item.ledroit}}<br/>
+{% endfor %}
+<a href="{{ url('michael_test_mon_orm_new') }}">Nouveau</a>
+{% endblock %}

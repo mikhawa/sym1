@@ -1,0 +1,25 @@
+Michael\Test\MonOrmBundle\Entity\Droit:
+    type: entity
+    table: droit
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: true
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        ledroit:
+            type: integer
+            nullable: true
+            options:
+                unsigned: true
+        lintitule:
+            type: string
+            nullable: true
+            length: 60
+            options:
+                fixed: false
+    lifecycleCallbacks: {  }

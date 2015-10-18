@@ -1,3 +1,7 @@
+michael_test_mon_orm:
+    resource: "@MichaelTestMonOrmBundle/Resources/config/routing.yml"
+    prefix:   /test/orm
+
 michael_test_slug:
     resource: "@MichaelTestSlugBundle/Resources/config/routing.yml"
     prefix:   /test/slug
